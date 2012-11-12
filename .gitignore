@@ -177,6 +177,7 @@ sftp-config.json
 
 .htaccess
 wp-config.php
+wp-config-sample.php
 wp-content/uploads/
 wp-content/blogs.dir/
 wp-content/upgrade/
