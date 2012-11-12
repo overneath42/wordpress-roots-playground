@@ -4,18 +4,16 @@
  */
 
 // Show less info to users on failed login for security. (Won't let a valid username be known)
-function show_less_login_info()
-{ 
+function show_less_login_info() {
 	return "<strong>ERROR</strong>: What's wrong, don't remember? Try again...";
 }
 
 // Don't generate and display WordPress version
-function no_generator() 
-{ 
-	return ''; 
+function no_generator() {
+	return '';
 }
 
-add_filter( 'the_generator', 'no_generator' );	
+add_filter( 'the_generator', 'no_generator' );
 add_filter( 'login_errors', 'show_less_login_info' );
 
 function roots_child_setup() {
@@ -26,9 +24,7 @@ function roots_child_setup() {
 	//add_image_size('tall', 300, 600);
 
 	remove_filter( 'excerpt_more', 'roots_excerpt_more' );
-
-	// Add post formats (http://codex.wordpress.org/Post_Formats)
-	// add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'));
+	require_once('templates/custom-posts/custom-post_file-download.php');
 
 }
 
