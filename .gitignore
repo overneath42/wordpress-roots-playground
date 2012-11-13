@@ -197,3 +197,9 @@ sitemap.xml.gz
 
 .sass-cache/
 *.scssc
+
+################
+# Other
+################
+
+*.pdf
